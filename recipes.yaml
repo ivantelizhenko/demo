@@ -19,22 +19,20 @@ recipes:
         metadata:
           supported_arch:
             - x86_64
-            - arm64
-          minimum_ram_gb: "16"
+          minimum_ram_gb: "8"
           options:
-            - name: "tel"
+            - name: "tel10"
               description: "Description.2"
-            - name: "host"
+            - name: "host10"
               description: "Host.2"
       v12.0:
         playbook: "playbooks/telizhe"
         metadata:
           supported_arch:
             - x86_64
-            - arm64
-          minimum_ram_gb: "32"
+          minimum_ram_gb: "8"
           options:
-            - name: "tel"
+            - name: "tel100"
               description: "Description.3"
-            - name: "host"
+            - name: "host100"
               description: "Host.3"
