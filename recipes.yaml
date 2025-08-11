@@ -32,5 +32,9 @@ recipes:
         metadata:
           supported_arch:
             - arm64
-            - x86_64
           minimum_ram_gb: "8"
+            options:
+            - name: "tel"
+              description: "Description.2"
+            - name: "host"
+              description: "Host.2"
