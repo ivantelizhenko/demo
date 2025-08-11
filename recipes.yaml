@@ -1,124 +1,120 @@
 recipes:
   pu_pu_pu:
-    name: "telizhenko version test"
-    description: "telizhenko description."
+    name: telizhenko version test
+    description: telizhenko description.
     versions:
       v12.0:
-        playbook: "playbooks/telizhe"
+        playbook: playbooks/telizhe
         metadata:
           supported_arch:
             - arm64
-          minimum_ram_gb: "8"
+          minimum_ram_gb: '8'
           options:
-            - name: "tel"
-              description: "Description.2"
-            - name: "host"
-              description: "Host.2"
-
+            - name: tel
+              description: Description.2
+            - name: host
+              description: Host.2
   pu_pa_pa:
-    name: "telizhenko option test - true"
-    description: "Alpha description."
+    name: telizhenko option test - true
+    description: Alpha description.
     versions:
       v1.0:
-        playbook: "playbooks/teli_alpha"
+        playbook: playbooks/teli_alpha
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: "4"
+          minimum_ram_gb: '4'
           options:
-            - name: "alpha"
-              description: "Alpha option 1"
-            - name: "server"
-              description: "Alpha server 1"
+            - name: alpha
+              description: Alpha option 1
+            - name: server
+              description: Alpha server 1
       v1.1:
-        playbook: "playbooks/teli_alpha"
+        playbook: playbooks/teli_alpha
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: "4"
+          minimum_ram_gb: '4'
           options:
-            - name: "alpha"
-              description: "Alpha option 2"
-
+            - name: alpha
+              description: Alpha option 2
   pi_pi_pi:
-    name: "telizhenko option test - false"
-    description: "Beta description."
+    name: telizhenko option test - false
+    description: Beta description.
     versions:
       v2.0:
-        playbook: "playbooks/teli_beta"
+        playbook: playbooks/teli_beta
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: "6"
+          minimum_ram_gb: '6'
           options:
-            - name: "beta"
-              description: "Beta option 1"
-            - name: "node"
-              description: "Beta node 1"
+            - name: beta
+              description: Beta option 1
+            - name: node
+              description: Beta node 1
       v2.2:
-        playbook: "playbooks/teli_beta"
+        playbook: playbooks/teli_beta
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: "6"
+          minimum_ram_gb: '6'
           options:
-            - name: "beta"
-              description: "Beta option 2"
-            - name: "node"
-              description: "Beta node 2"
-            - name: "car"
-              description: "brrrr"
-
+            - name: beta
+              description: Beta option 2
+            - name: node
+              description: Beta node 2
+            - name: car
+              description: brrrr
   pa_pa_pa:
-    name: "telizhenko ram:2 & arch:x86_64"
-    description: "Gamma description."
+    name: 'telizhenko ram:2 & arch:x86_64'
+    description: Gamma description.
     versions:
       v3.0:
-        playbook: "playbooks/teli_gamma"
+        playbook: playbooks/teli_gamma
         metadata:
           supported_arch:
             - arm64
-          minimum_ram_gb: "2"
+          minimum_ram_gb: '2'
           options:
-            - name: "gamma"
-              description: "Gamma option 1"
-            - name: "host"
-              description: "Gamma host 1"
+            - name: gamma
+              description: Gamma option 1
+            - name: host
+              description: Gamma host 1
       v3.5:
-        playbook: "playbooks/teli_gamma"
+        playbook: playbooks/teli_gamma
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: "2"
+          minimum_ram_gb: '2'
           options:
-            - name: "gamma"
-              description: "Gamma option 2"
-            - name: "host"
-              description: "Gamma host 2"
-
+            - name: gamma
+              description: Gamma option 2
+            - name: host
+              description: Gamma host 2
   po_po_po:
-    name: "telizhenko test ram:16 & arm64"
-    description: "Delta description."
+    name: 'telizhenko test ram:16 & arm64'
+    description: Delta description.
     versions:
       v4.0:
-        playbook: "playbooks/teli_delta"
+        playbook: playbooks/teli_delta
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: "10"
+          minimum_ram_gb: '10'
           options:
-            - name: "delta"
-              description: "Delta option 1"
-            - name: "srv"
-              description: "Delta srv 1"
+            - name: delta
+              description: Delta option 1
+            - name: srv
+              description: Delta srv 1
       v4.1:
-        playbook: "playbooks/teli_delta"
+        playbook: playbooks/teli_delta
         metadata:
           supported_arch:
             - arm64
-          minimum_ram_gb: "16"
+          minimum_ram_gb: '16'
           options:
-            - name: "delta"
-              description: "Delta option 2"
-            - name: "srv"
-              description: "Delta srv 2"
+            - name: delta
+              description: Delta option 2
+            - name: srv
+              description: Delta srv 2
