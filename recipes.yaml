@@ -93,7 +93,7 @@ recipes:
             - name: host
               description: Gamma host 2
   po_po_po:
-    name: 'telizhenko test ram:16 & arm64'
+    name: 'error with ram'
     description: Delta description.
     versions:
       v4.0:
@@ -112,7 +112,7 @@ recipes:
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: '8'
+          minimum_ram_gb: '16'
           options:
             - name: delta
               description: Delta option 2
