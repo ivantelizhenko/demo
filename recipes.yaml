@@ -101,7 +101,7 @@ recipes:
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: '16'
+          minimum_ram_gb: '8'
           options:
             - name: delta
               description: Delta option 1
