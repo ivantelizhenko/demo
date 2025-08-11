@@ -39,7 +39,7 @@ recipes:
             - name: alpha
               description: Alpha option 2
   pi_pi_pi:
-    name: telizhenko option test - false
+    name: error with options
     description: Beta description.
     versions:
       v2.0:
@@ -67,7 +67,7 @@ recipes:
             - name: car
               description: brrrr
   pa_pa_pa:
-    name: 'telizhenko ram:2 & arch:x86_64'
+    name: 'error with archs'
     description: Gamma description.
     versions:
       v3.0:
