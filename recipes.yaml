@@ -1,6 +1,6 @@
 recipes:
   last_ivan_test:
-    name: telizhenko version test
+    name: last ivan test
     description: telizhenko description.
     versions:
       v11.0:
