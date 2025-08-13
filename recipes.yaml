@@ -1,4 +1,20 @@
 recipes:
+  last_ivan_test:
+    name: telizhenko version test
+    description: telizhenko description.
+    versions:
+      v11.0:
+        playbook: playbooks/telizhe
+        metadata:
+          supported_arch:
+            - arm64
+          minimum_ram_gb: '8'
+      v12.0:
+        playbook: playbooks/telizhe
+        metadata:
+          supported_arch:
+            - arm64
+          minimum_ram_gb: '8'
   pu_pu_pu:
     name: telizhenko version test
     description: telizhenko description.
