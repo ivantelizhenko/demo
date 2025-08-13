@@ -3,18 +3,18 @@ recipes:
     name: last ivan test
     description: telizhenko description.
     versions:
-      v11.0:
-        playbook: playbooks/telizhe
+      v1.0:
+        playbook: playbooks/teli_alpha
         metadata:
           supported_arch:
-            - arm64
-          minimum_ram_gb: '8'
-      v12.0:
-        playbook: playbooks/telizhe
+            - x86_64
+          minimum_ram_gb: '4'
+      v2.0:
+        playbook: playbooks/teli_alpha2
         metadata:
           supported_arch:
-            - arm64
-          minimum_ram_gb: '8'
+            - x86_64
+          minimum_ram_gb: '4'
   pu_pu_pu:
     name: telizhenko version test
     description: telizhenko description.
