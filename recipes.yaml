@@ -15,6 +15,54 @@ recipes:
           supported_arch:
             - x86_64
           minimum_ram_gb: '4'
+  last_ivan_test2:
+    name: last ivan test 2
+    description: telizhenko description.
+    versions:
+      v1.0:
+        playbook: playbooks/teli_alpha
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'
+      v2.0:
+        playbook: playbooks/teli_alpha2
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'        
+  last_ivan_test3:
+    name: last ivan test 3
+    description: telizhenko description.
+    versions:
+      v1.0:
+        playbook: playbooks/teli_alpha
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'
+      v2.0:
+        playbook: playbooks/teli_alpha2
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'
+  last_ivan_test4:
+    name: last ivan test 4
+    description: telizhenko description.
+    versions:
+      v1.0:
+        playbook: playbooks/teli_alpha
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'
+      v2.0:
+        playbook: playbooks/teli_alpha2
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'
   pu_pu_pu:
     name: telizhenko version test
     description: telizhenko description.
