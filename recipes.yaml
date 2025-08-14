@@ -1,4 +1,30 @@
 recipes:
+  extra_test:
+    name: extra test
+    description: Alpha description.
+    versions:
+      v1.0:
+        playbook: playbooks/teli_alpha
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'
+          options:
+            - name: alpha
+              description: Alpha option 1
+            - name: server
+              description: Alpha server 1
+      v1.1:
+        playbook: playbooks/teli_alpha
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'
+          options:
+            - name: alpha
+              description: Alpha option 2
+            - name: server
+              description: Alpha server 2
   last_ivan_test:
     name: last ivan test
     description: telizhenko description.
