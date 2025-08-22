@@ -1,32 +1,6 @@
 recipes:
-  extra_test:
-    name: extra test
-    description: Alpha description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 1
-            - name: server
-              description: Alpha server 1
-      v1.1:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 2
-            - name: server
-              description: Alpha server 2
   last_ivan_test:
-    name: last ivan test
+    name: batch update test (1)
     description: telizhenko description.
     versions:
       v1.0:
@@ -42,7 +16,7 @@ recipes:
             - x86_64
           minimum_ram_gb: '4'
   last_ivan_test2:
-    name: last ivan test 2
+    name: batch update test (2)
     description: telizhenko description.
     versions:
       v1.0:
@@ -58,7 +32,7 @@ recipes:
             - x86_64
           minimum_ram_gb: '4'        
   last_ivan_test3:
-    name: last ivan test 3
+    name: batch update test (3)
     description: telizhenko description.
     versions:
       v1.0:
@@ -74,7 +48,7 @@ recipes:
             - x86_64
           minimum_ram_gb: '4'
   last_ivan_test4:
-    name: last ivan test 4
+    name: batch update test (4)
     description: telizhenko description.
     versions:
       v1.0:
@@ -90,7 +64,7 @@ recipes:
             - x86_64
           minimum_ram_gb: '4'
   pu_pu_pu:
-    name: telizhenko version test
+    name: last version
     description: telizhenko description.
     versions:
       v12.0:
@@ -103,153 +77,9 @@ recipes:
             - name: tel
               description: Description.2
             - name: host
-              description: Host.2
-  pu_pa_pa:
-    name: telizhenko option test - true
-    description: Alpha description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 1
-            - name: server
-              description: Alpha server 1
-      v1.1:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 2
-  pu_pa_pa2:
-    name: one more true
-    description: Alpha description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 1
-            - name: server
-              description: Alpha server 1
-      v1.1:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 2
-  pu_pa_pa3:
-    name: one more true 2
-    description: Alpha description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 1
-            - name: server
-              description: Alpha server 1
-      v1.1:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 2
-  pu_pa_pa4:
-    name: one more true 3
-    description: Alpha description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 1
-            - name: server
-              description: Alpha server 1
-      v1.1:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 2
-  pu_pa_pa5:
-    name: one more true 4
-    description: Alpha description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 1
-            - name: server
-              description: Alpha server 1
-      v1.1:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 2
-  pu_pa_pa6:
-    name: one more true 5
-    description: Alpha description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 1
-            - name: server
-              description: Alpha server 1
-      v1.1:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-          options:
-            - name: alpha
-              description: Alpha option 2
+              description: Host.2 
   pi_pi_pi:
-    name: error with options
+    name: mismatch options
     description: Beta description.
     versions:
       v2.0:
@@ -277,7 +107,7 @@ recipes:
             - name: car
               description: brrrr
   pa_pa_pa:
-    name: 'error with archs'
+    name: incompatible architecture  
     description: Gamma description.
     versions:
       v3.0:
@@ -303,7 +133,7 @@ recipes:
             - name: host
               description: Gamma host 2
   po_po_po:
-    name: 'error with ram'
+    name: insufficient ram
     description: Delta description.
     versions:
       v4.0:
