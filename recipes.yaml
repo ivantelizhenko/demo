@@ -132,6 +132,34 @@ recipes:
               description: Gamma option 2
             - name: host
               description: Gamma host 2
+  pa_pi_pi:
+    name: incompatible architecture, mismatch options, insufficient ram  
+    description: Gamma description.
+    versions:
+      v3.0:
+        playbook: playbooks/teli_gamma
+        metadata:
+          supported_arch:
+            - arm64
+          minimum_ram_gb: '2'
+          options:
+            - name: gamma
+              description: Gamma option 1
+            - name: host
+              description: Gamma host 1
+      v3.5:
+        playbook: playbooks/teli_gamma
+        metadata:
+          supported_arch:
+            - arm64
+          minimum_ram_gb: '16'
+          options:
+            - name: gamma
+              description: Gamma option 2
+            - name: host
+              description: Gamma host 2
+             - name: pipi
+              description: Gamma host 1
   po_po_po:
     name: insufficient ram
     description: Delta description.
