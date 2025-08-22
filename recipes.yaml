@@ -114,7 +114,7 @@ recipes:
         playbook: playbooks/teli_gamma
         metadata:
           supported_arch:
-            - x86_64
+            - arm64
           minimum_ram_gb: '2'
           options:
             - name: gamma
