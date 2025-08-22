@@ -30,7 +30,7 @@ recipes:
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: '4'        
+          minimum_ram_gb: '4'
   last_ivan_test3:
     name: batch update test (3)
     description: telizhenko description.
@@ -77,7 +77,7 @@ recipes:
             - name: tel
               description: Description.2
             - name: host
-              description: Host.2 
+              description: Host.2
   pi_pi_pi:
     name: mismatch options
     description: Beta description.
@@ -107,7 +107,7 @@ recipes:
             - name: car
               description: brrrr
   pa_pa_pa:
-    name: incompatible architecture  
+    name: incompatible architecture
     description: Gamma description.
     versions:
       v3.0:
@@ -133,7 +133,7 @@ recipes:
             - name: host
               description: Gamma host 2
   pa_pi_pi:
-    name: incompatible architecture, mismatch options, insufficient ram  
+    name: 'incompatible architecture, mismatch options, insufficient ram'
     description: Gamma description.
     versions:
       v3.0:
@@ -158,7 +158,7 @@ recipes:
               description: Gamma option 2
             - name: host
               description: Gamma host 2
-             - name: pipi
+            - name: pipi
               description: Gamma host 1
   po_po_po:
     name: insufficient ram
