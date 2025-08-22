@@ -1,4 +1,20 @@
 recipes:
+  last_ivan_testu:
+    name: fast update
+    description: telizhenko description.
+    versions:
+      v1.0:
+        playbook: playbooks/teli_alpha
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'
+      v2.0:
+        playbook: playbooks/teli_alpha2
+        metadata:
+          supported_arch:
+            - x86_64
+          minimum_ram_gb: '4'
   last_ivan_test:
     name: batch update test (1)
     description: telizhenko description.
