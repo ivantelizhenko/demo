@@ -1,204 +1,107 @@
 recipes:
-  last_ivan_testu:
-    name: fast update
-    description: telizhenko description.
+  # --- Системні оновлення ---
+  system-quick-update:
+    name: Quick System Update
+    description: Applies a small, non-critical patch to the operating system.
     versions:
       v1.0:
-        playbook: playbooks/teli_alpha
+        playbook: playbooks/system/apply_patch_v1.yml
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: '4'
+          minimum_ram_gb: 4
       v2.0:
-        playbook: playbooks/teli_alpha2
+        playbook: playbooks/system/apply_patch_v2.yml
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: '4'
-  last_ivan_test:
-    name: batch update test (1)
-    description: telizhenko description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-      v2.0:
-        playbook: playbooks/teli_alpha2
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-  last_ivan_test2:
-    name: batch update test (2)
-    description: telizhenko description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-      v2.0:
-        playbook: playbooks/teli_alpha2
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-  last_ivan_test3:
-    name: batch update test (3)
-    description: telizhenko description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-      v2.0:
-        playbook: playbooks/teli_alpha2
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-  last_ivan_test4:
-    name: batch update test (4)
-    description: telizhenko description.
-    versions:
-      v1.0:
-        playbook: playbooks/teli_alpha
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-      v2.0:
-        playbook: playbooks/teli_alpha2
-        metadata:
-          supported_arch:
-            - x86_64
-          minimum_ram_gb: '4'
-  pu_pu_pu:
-    name: last version
-    description: telizhenko description.
+          minimum_ram_gb: 4
+
+  # --- Рецепти для розгортання сервісів ---
+  deploy-monitoring-service:
+    name: Deploy Monitoring Service
+    description: Deploys the main monitoring service on the target nodes.
     versions:
       v12.0:
-        playbook: playbooks/telizhe
+        playbook: playbooks/services/deploy_monitoring.yml
         metadata:
           supported_arch:
             - arm64
-          minimum_ram_gb: '8'
+          minimum_ram_gb: 8
           options:
-            - name: tel
-              description: Description.2
-            - name: host
-              description: Host.2
-  pi_pi_pi:
-    name: mismatch options
-    description: Beta description.
+            - name: service_port
+              description: The port number for the monitoring service.
+            - name: target_host
+              description: The hostname or IP address of the target server.
+
+  # --- Тестові сценарії для перевірки валідації ---
+  test-config-options-mismatch:
+    name: Test Case - Mismatched Options
+    description: A test recipe to verify handling of different options between versions.
     versions:
       v2.0:
-        playbook: playbooks/teli_beta
+        playbook: playbooks/tests/validate_options.yml
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: '6'
+          minimum_ram_gb: 6
           options:
-            - name: beta
-              description: Beta option 1
-            - name: node
-              description: Beta node 1
+            - name: feature_flag
+              description: Toggles the beta feature.
+            - name: node_id
+              description: The specific node identifier.
       v2.2:
-        playbook: playbooks/teli_beta
+        playbook: playbooks/tests/validate_options.yml
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: '6'
+          minimum_ram_gb: 6
           options:
-            - name: beta
-              description: Beta option 2
-            - name: node
-              description: Beta node 2
-            - name: car
-              description: brrrr
-  pa_pa_pa:
-    name: incompatible architecture
-    description: Gamma description.
+            - name: feature_flag
+              description: Toggles the beta feature.
+            - name: node_id
+              description: The specific node identifier.
+            - name: enable_logging # Нова опція, якої не було в v2.0
+              description: Enables verbose logging.
+
+  test-incompatible-architecture:
+    name: Test Case - Incompatible Architecture
+    description: A test recipe to verify behavior on unsupported ARM64 architecture.
     versions:
       v3.0:
-        playbook: playbooks/teli_gamma
+        playbook: playbooks/tests/validate_architecture.yml
         metadata:
           supported_arch:
             - arm64
-          minimum_ram_gb: '2'
-          options:
-            - name: gamma
-              description: Gamma option 1
-            - name: host
-              description: Gamma host 1
-      v3.5:
-        playbook: playbooks/teli_gamma
-        metadata:
-          supported_arch:
-            - arm64
-          minimum_ram_gb: '2'
-          options:
-            - name: gamma
-              description: Gamma option 2
-            - name: host
-              description: Gamma host 2
-  pa_pi_pi:
-    name: 'incompatible architecture, mismatch options, insufficient ram'
-    description: Gamma description.
-    versions:
-      v3.0:
-        playbook: playbooks/teli_gamma
-        metadata:
-          supported_arch:
-            - arm64
-          minimum_ram_gb: '2'
-          options:
-            - name: gamma
-              description: Gamma option 1
-            - name: host
-              description: Gamma host 1
-      v3.5:
-        playbook: playbooks/teli_gamma
-        metadata:
-          supported_arch:
-            - arm64
-          minimum_ram_gb: '16'
-          options:
-            - name: gamma
-              description: Gamma option 2
-            - name: host
-              description: Gamma host 2
-            - name: pipi
-              description: Gamma host 1
-  po_po_po:
-    name: insufficient ram
-    description: Delta description.
+          minimum_ram_gb: 2
+
+  test-insufficient-ram:
+    name: Test Case - Insufficient RAM
+    description: A test recipe to verify behavior when system RAM is too low.
     versions:
       v4.0:
-        playbook: playbooks/teli_delta
+        playbook: playbooks/tests/validate_ram.yml
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: '8'
-          options:
-            - name: delta
-              description: Delta option 1
-            - name: srv
-              description: Delta srv 1
+          minimum_ram_gb: 8 # Ця версія вимагає 8 ГБ
       v4.1:
-        playbook: playbooks/teli_delta
+        playbook: playbooks/tests/validate_ram.yml
         metadata:
           supported_arch:
             - x86_64
-          minimum_ram_gb: '16'
+          minimum_ram_gb: 16 # А ця вже 16 ГБ
+
+  test-multiple-failures:
+    name: Test Case - Multiple Failure Conditions
+    description: Verifies handling of several issues at once (arch, ram, options).
+    versions:
+      v1.0:
+        playbook: playbooks/tests/validate_all.yml
+        metadata:
+          supported_arch:
+            - arm64 # Потенційна несумісність
+          minimum_ram_gb: 2
           options:
-            - name: delta
-              description: Delta option 2
-            - name: srv
-              description: Delta srv 2
+            - name: config_path
+              description: Path to the main
