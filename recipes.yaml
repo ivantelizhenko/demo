@@ -4,13 +4,13 @@ recipes:
     name: Quick System Update
     description: Applies a small, non-critical patch to the operating system.
     versions:
-      v1.0:
+      vdddddd.ddddd:
         playbook: playbooks/system/apply_patch_v1.yml
         metadata:
           supported_arch:
             - x86_64
           minimum_ram_gb: 4
-      v2.0:
+      dkmsd12:
         playbook: playbooks/system/apply_patch_v2.yml
         metadata:
           supported_arch:
