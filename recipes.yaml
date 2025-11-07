@@ -4,7 +4,7 @@ recipes:
     name: Quick System Update
     description: Applies a small, non-critical patch to the operating system.
     versions:
-      1.1.0:
+      1.1:
         playbook: playbooks/system/apply_patch_v1.yml
         metadata:
           supported_arch:
