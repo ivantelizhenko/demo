@@ -4,7 +4,7 @@ recipes:
     name: Quick System Update
     description: Applies a small, non-critical patch to the operating system.
     versions:
-      v1.1:
+      1.1.0:
         playbook: playbooks/system/apply_patch_v1.yml
         metadata:
           supported_arch:
@@ -16,7 +16,7 @@ recipes:
     name: Deploy Monitoring Service
     description: Deploys the main monitoring service on the target nodes.
     versions:
-      v12.0:
+      12.0.0:
         playbook: playbooks/services/deploy_monitoring.yml
         metadata:
           supported_arch:
@@ -33,7 +33,7 @@ recipes:
     name: Test Case - Mismatched Options
     description: A test recipe to verify handling of different options between versions.
     versions:
-      v2.0:
+      2.0.0:
         playbook: playbooks/tests/validate_options.yml
         metadata:
           supported_arch:
@@ -44,7 +44,7 @@ recipes:
               description: Toggles the beta feature.
             - name: node_id
               description: The specific node identifier.
-      v2.2:
+      2.2.2:
         playbook: playbooks/tests/validate_options.yml
         metadata:
           supported_arch:
@@ -62,7 +62,7 @@ recipes:
     name: Test Case - Incompatible Architecture
     description: A test recipe to verify behavior on unsupported ARM64 architecture.
     versions:
-      v3.0:
+      3.0.0:
         playbook: playbooks/tests/validate_architecture.yml
         metadata:
           supported_arch:
@@ -73,13 +73,13 @@ recipes:
     name: Test Case - Insufficient RAM
     description: A test recipe to verify behavior when system RAM is too low.
     versions:
-      v4.0:
+      4.0.0:
         playbook: playbooks/tests/validate_ram.yml
         metadata:
           supported_arch:
             - x86_64
           minimum_ram_gb: 8 # Ця версія вимагає 8 ГБ
-      v4.1:
+      4.1.1:
         playbook: playbooks/tests/validate_ram.yml
         metadata:
           supported_arch:
@@ -90,7 +90,7 @@ recipes:
     name: Test Case - Multiple Failure Conditions
     description: Verifies handling of several issues at once (arch, ram, options).
     versions:
-      v1.0:
+      1.0.0:
         playbook: playbooks/tests/validate_all.yml
         metadata:
           supported_arch:
